@@ -16,9 +16,9 @@ Danny has provided you with a sample of his overall customer data due to privacy
 
 Danny has shared with you 3 key datasets for this case study:
 
-sales
-menu
-members
+- `sales`
+- `menu`
+- `members`
 
 ### Case Study Questions
 Each of the following case study questions can be answered using a single SQL statement:
