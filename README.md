@@ -1,4 +1,4 @@
-# 8-Weeks-SQL-Challenge-by-Danny-Ma
+# [8-Weeks-SQL-Challenge-by-Danny-Ma](https://8weeksqlchallenge.com/)
 SQL learning journey by Danny Ma
 
 ## [Case Study #1 - Danny's Diner](https://github.com/TiaraEsyPramukti/8-Weeks-SQL-Challenge-by-Danny-Ma/blob/main/8_weeks_sql_challenge_Danny's_Diner_SQL_Case_Study.sql)
