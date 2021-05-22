@@ -1,7 +1,7 @@
 # 8-Weeks-SQL-Challenge-by-Danny-Ma
 SQL learning journey by Danny Ma
 
-## Case Study #1 - Danny's Diner[https://github.com/TiaraEsyPramukti/8-Weeks-SQL-Challenge-by-Danny-Ma/blob/main/8_weeks_sql_challenge_Danny's_Diner_SQL_Case_Study.sql]
+## [Case Study #1 - Danny's Diner](https://github.com/TiaraEsyPramukti/8-Weeks-SQL-Challenge-by-Danny-Ma/blob/main/8_weeks_sql_challenge_Danny's_Diner_SQL_Case_Study.sql)
 ### Introduction
 Danny seriously loves Japanese food so in the beginning of 2021, he decides to embark upon a risky venture and opens up a cute little restaurant that sells his 3 favourite foods: sushi, curry and ramen.
 
