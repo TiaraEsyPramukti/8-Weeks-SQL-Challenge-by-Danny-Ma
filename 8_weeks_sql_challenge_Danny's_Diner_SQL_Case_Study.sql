@@ -161,7 +161,7 @@ GROUP BY customer_id;
 -- 9.  If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 SELECT
 	customer_id,
-	SUM(CASE WHEN product_name = 'sushi' THEN 20 ELSE 10 END) AS point
+	SUM(CASE WHEN product_name = 'sushi' THEN 20*price ELSE 10*price END) AS point
 FROM sales
 JOIN menu
 ON sales.product_id = menu.product_id
@@ -174,7 +174,8 @@ WITH point AS (
 		sales.customer_id,
 		order_date,
 		product_name,
-		join_date
+		join_date,
+		price
 	FROM sales
 	JOIN menu ON sales.product_id = menu.product_id
 	FULL JOIN members ON sales.customer_id = members.customer_id
@@ -183,9 +184,9 @@ WITH point AS (
 SELECT
 	customer_id,
 	SUM(CASE
-		WHEN DATEPART(week, order_date) = DATEPART(week, join_date) THEN 20
-		WHEN (DATEPART(week, order_date) <> DATEPART(week, join_date)) AND product_name = 'sushi' THEN 20
-		WHEN (DATEPART(week, order_date) <> DATEPART(week, join_date)) AND product_name <> 'sushi' THEN 10 END) AS point
+		WHEN DATEPART(week, order_date) = DATEPART(week, join_date) THEN 20*price
+		WHEN (DATEPART(week, order_date) <> DATEPART(week, join_date)) AND product_name = 'sushi' THEN 20*price
+		WHEN (DATEPART(week, order_date) <> DATEPART(week, join_date)) AND product_name <> 'sushi' THEN 10*price END) AS point
 FROM point
 WHERE order_date < '2021-02-01'
 GROUP BY customer_id;
@@ -196,7 +197,8 @@ GROUP BY customer_id;
 		sales.customer_id,
 		order_date,
 		product_name,
-		join_date
+		join_date,
+		price
 	FROM sales
 	JOIN menu ON sales.product_id = menu.product_id
 	FULL JOIN members ON sales.customer_id = members.customer_id)
@@ -204,9 +206,9 @@ GROUP BY customer_id;
 SELECT
 	customer_id,
 	SUM(CASE
-		WHEN join_date IS NOT NULL AND DATEPART(week, order_date) = DATEPART(week, join_date) THEN 20
-		WHEN (join_date IS NULL OR DATEPART(week, order_date) <> DATEPART(week, join_date)) AND product_name = 'sushi' THEN 20
-		WHEN (join_date IS NULL OR DATEPART(week, order_date) <> DATEPART(week, join_date)) AND product_name <> 'sushi' THEN 10 END) AS point
+		WHEN join_date IS NOT NULL AND DATEPART(week, order_date) = DATEPART(week, join_date) THEN 20*price
+		WHEN (join_date IS NULL OR DATEPART(week, order_date) <> DATEPART(week, join_date)) AND product_name = 'sushi' THEN 20*price
+		WHEN (join_date IS NULL OR DATEPART(week, order_date) <> DATEPART(week, join_date)) AND product_name <> 'sushi' THEN 10*price END) AS point
 FROM point
 WHERE order_date < '2021-02-01'
 GROUP BY customer_id;
@@ -218,7 +220,8 @@ WITH point AS (
 		sales.customer_id,
 		order_date,
 		product_name,
-		join_date
+		join_date,
+		price
 	FROM sales
 	JOIN menu ON sales.product_id = menu.product_id
 	FULL JOIN members ON sales.customer_id = members.customer_id)
@@ -226,8 +229,8 @@ WITH point AS (
 SELECT
 	customer_id,
 	SUM(CASE
-		WHEN join_date IS NOT NULL AND DATEPART(week, order_date) = DATEPART(week, join_date) THEN 20
-		WHEN (join_date IS NULL OR join_date IS NOT NULL) AND product_name = 'sushi' THEN 20 ELSE 10 END) AS point
+		WHEN join_date IS NOT NULL AND DATEPART(week, order_date) = DATEPART(week, join_date) THEN 20*price
+		WHEN (join_date IS NULL OR join_date IS NOT NULL) AND product_name = 'sushi' THEN 20*price ELSE 10*price END) AS point
 FROM point
 WHERE order_date < '2021-02-01'WHERE order_date < '2021-02-01'
 GROUP BY customer_id;*/
