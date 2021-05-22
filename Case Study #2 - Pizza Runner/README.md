@@ -42,9 +42,9 @@ This case study has LOTS of questions - they are broken up by area of focus incl
     - Meat Lovers - Exclude Beef
     - Meat Lovers - Extra Bacon
     - Meat Lovers - Exclude Cheese, Bacon - Extra Mushroom, Peppers
-5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients
+5. Generate an alphabetically ordered comma separated ingredient list for each pizza order from the customer_orders table and add a 2x in front of any relevant ingredients\n
 For example: "Meat Lovers: 2xBacon, Beef, ... , Salami"
-6. What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?
+7. What is the total quantity of each ingredient used in all delivered pizzas sorted by most frequent first?
 
 ### Pricing and Ratings
 1. If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - how much money has Pizza Runner made so far if there are no delivery fees?
