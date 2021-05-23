@@ -12,7 +12,7 @@ Danny started by recruiting “runners” to deliver fresh pizza from Pizza Runn
 ## Case Study Questions
 This case study has LOTS of questions - they are broken up by area of focus including:
 
-### Pizza Metrics
+### [Pizza Metrics](https://github.com/TiaraEsyPramukti/8-Weeks-SQL-Challenge-by-Danny-Ma/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/8_weeks_sql_challenge_Pizza_Runner_SQL_Case_Study_pizza_metrics.sql)
 1. How many pizzas were ordered?
 2. How many unique customer orders were made?
 3. How many successful orders were delivered by each runner?
