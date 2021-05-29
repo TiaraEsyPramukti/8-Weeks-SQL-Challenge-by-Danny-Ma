@@ -24,7 +24,7 @@ This case study has LOTS of questions - they are broken up by area of focus incl
 9. What was the total volume of pizzas ordered for each hour of the day?
 10. What was the volume of orders for each day of the week?
 
-### Runner and Customer Experience
+### [Runner and Customer Experience](https://github.com/TiaraEsyPramukti/8-Weeks-SQL-Challenge-by-Danny-Ma/blob/main/Case%20Study%20%232%20-%20Pizza%20Runner/8_weeks_sql_challenge_Pizza_Runner_SQL_Case_Study_runner_and_customer_experience_%5BMySQL%5D.sql)
 1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
 2. What was the average time in minutes it took for each runner to arrive at the Pizza Runner HQ to pickup the order?
 3. Is there any relationship between the number of pizzas and how long the order takes to prepare?
